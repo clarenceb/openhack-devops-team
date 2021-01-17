@@ -3,7 +3,7 @@ name: Trips PR Validation
 on:
   pull_request:
     branches:
-      - feature/**
+      - main
     paths:
       - apis/trips/**
       - .github/workflows/trips-pr.yml
