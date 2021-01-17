@@ -1,0 +1,14 @@
+# Global owner(s) - team or individual(s) separated by a space - can be overriden below
+*   @clarenceb
+
+# POI API owner(s)
+/apis/poi    @clarenceb
+
+# Trips API owner(s)
+/apis/trips @clarenceb
+
+# User Java API owner(s)
+/apis/user-java @clarenceb
+
+# User Profile API owner(s)
+/apis/userprofile @clarenceb
