@@ -4,7 +4,7 @@ env:
   build_name: Trips
   registry: docker.pkg.github.com
   repository: clarenceb/api-trips
-  docker_path: ./apis/trips
+  docker_path: apis/trips
 
 on:
   push:
@@ -20,7 +20,6 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: apis/trips
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
