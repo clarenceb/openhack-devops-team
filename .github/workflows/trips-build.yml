@@ -2,6 +2,9 @@ name: Trips Build and Publish Image
 
 env:
   build_name: Trips
+  registry: docker.pkg.github.com
+  repository: clarenceb/api-trips
+  docker_path: ./apis/trips
 
 on:
   push:
@@ -30,9 +33,8 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push container image
-        uses: docker/build-push-action@v2.2.2
-        with:
-          context: ./apis/trips
-          push: true
-          tags: docker.pkg.github.com/api-trips:${{ github.sha }}
+      - name: Docker build
+        run: docker build -t $registry/$repository:${{github.run_number}} --build-arg build_version=${{github.run_number}} $docker_path
+
+      - name: Docker push
+        run: docker push $registry/$repository:${{github.run_number}}
