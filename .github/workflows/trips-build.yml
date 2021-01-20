@@ -34,4 +34,4 @@ jobs:
         uses: docker/build-push-action@v2.2.2
         with:
           push: true
-          tags: docker.pkg.github.com/api-trips:${{ GITHUB_SHA }}
+          tags: docker.pkg.github.com/api-trips:${{ github.sha }}
