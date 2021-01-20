@@ -3,7 +3,7 @@ name: Trips Build and Publish Image
 env:
   build_name: Trips
   registry: docker.pkg.github.com
-  repository: clarenceb/api-trips
+  repository: clarenceb/devops-openhack/api-trips
   docker_path: apis/trips
 
 on:
